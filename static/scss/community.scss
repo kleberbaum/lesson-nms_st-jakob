@@ -1,0 +1,242 @@
+/*viewport***************************************************************************************************************/
+
+@media only screen and (max-width: 1440px) {
+  .admins-s{
+    .hollow{box-shadow: 0 0 0 20px rgba(0, 0, 0, 0.2), inset 0 0 3px rgba(115,114, 23, 0.8);}
+  }
+  .mods-s{
+    .pic{display: none;}
+    .hollow{box-shadow: 0 0 0 12px rgba(0, 0, 0, 0.2), inset 0 0 3px rgba(115,114, 23, 0.8);}
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .admins-s{
+    .hollow{box-shadow: 0 0 0 20px rgba(0, 0, 0, 0.2), inset 0 0 3px rgba(115,114, 23, 0.8);}
+  }
+  .mods-s{
+    .pic{display: none;}
+    .hollow{box-shadow: 0 0 0 12px rgba(0, 0, 0, 0.2), inset 0 0 3px rgba(115,114, 23, 0.8);}
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .admins-s{
+    .pic{display: none;}
+    .hollow{box-shadow: 0 0 0 13px rgba(0, 0, 0, 0.2), inset 0 0 3px rgba(115,114, 23, 0.8);}
+  }
+  .mods-s{
+    .pic{display: none;}
+    .hollow{box-shadow: 0 0 0 6px rgba(0, 0, 0, 0.2), inset 0 0 3px rgba(115,114, 23, 0.8);}
+  }
+}
+
+/*section*sharingan-s****************************************************************************************************/
+
+.community{
+
+}
+
+.community-s {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  top: $navtop;
+}
+
+.admins-s{
+  background-color: #2a2a2a;
+  .members{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    min-height: calc(100vh - 320px);
+    width: 100%;
+    .mrow{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      align-items: center;
+      width: 100%;
+      .member{
+        display: flex;
+        flex-direction: column;
+        flex: 0.15;
+        .profile{
+          position: relative;
+          min-width: 150px;
+          max-width: 180px;
+          .pic{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            img{
+              border-radius: 50%;
+              width: 100%;
+              height: auto;
+            }
+          }
+          .hollow{
+            position: relative;
+            border-radius: 50%;
+            margin: 11%;
+            padding: 1%;
+            transition: all 0.4s ease-in-out;
+            background-attachment: fixed;
+            background-image: url(https://erebos.xyz/PIC/m33.png);
+            // background-color: #a80000;
+            .info{
+              transition: all 0.4s ease-in-out;
+              transform-style: preserve-3d;
+              margin: -2.5%;
+              .iback{
+                display: flex;
+                flex-direction: column;
+                position: absolute;
+                top: 0px;
+                right: 0px;
+                align-items: center;
+                justify-content: center;
+                width: 100%;
+                height: 100%;
+                border-radius: 50%;
+                color: #fff;
+                background: #000;
+                transform: rotate3d(0,1,0,180deg);
+                -webkit-backface-visibility: hidden;
+                backface-visibility: hidden;
+                h3{
+
+
+                }
+                p{
+
+                }
+              }
+              .ifront{
+                overflow: hidden;
+                border-radius: 50%;
+                img{
+                  position: relative;
+                  width: 100%;
+                  transform: scale(1.25);
+                  height: auto;
+                  -webkit-backface-visibility: hidden;
+                  backface-visibility: hidden;
+                }
+              }
+            }
+          }
+          &:hover .hollow {
+            box-shadow:
+              0 0 0 0px rgba(255,255,255,0.3),
+              inset 0 0 3px rgba(115,114, 23, 0.8);
+          }
+          &:hover .hollow .info {
+            transform-style: preserve-3d;
+            transform: rotate3d(0,1,0,-180deg);
+          }
+        }
+      }
+    }
+  }
+}
+
+.mods-s{
+  background-color: #a80000;
+  .members{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    min-height: calc(100vh - 320px);
+    width: 100%;
+    .mrow{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      align-items: center;
+      width: 100%;
+      .member{
+        display: flex;
+        flex-direction: column;
+        flex: 0.15;
+        min-width: 150px;
+        max-width: 180px;
+        .profile{
+          position: relative;
+          .pic{
+            overflow: hidden;
+            position: absolute;
+            border-radius: 50%;
+            img{
+              width: 100%;
+              height: auto;
+            }
+          }
+          .hollow{
+            position: relative;
+            border-radius: 50%;
+            margin: 11%;
+            padding: 1%;
+            transition: all 0.4s ease-in-out;
+            background-attachment: fixed;
+            background-image: url(https://erebos.xyz/PIC/m33.png);
+            // background-color: #a80000;
+            .info{
+              transition: all 0.4s ease-in-out;
+              transform-style: preserve-3d;
+              margin: -2.5%;
+              .iback{
+                display: flex;
+                flex-direction: column;
+                position: absolute;
+                top: 0px;
+                right: 0px;
+                align-items: center;
+                justify-content: center;
+                width: 100%;
+                height: 100%;
+                border-radius: 50%;
+                color: #fff;
+                background: #000;
+                transform: rotate3d(0,1,0,180deg);
+                -webkit-backface-visibility: hidden;
+                backface-visibility: hidden;
+                h3{
+
+
+                }
+                p{
+
+                }
+              }
+              .ifront{
+                overflow: hidden;
+                border-radius: 50%;
+                img{
+                  position: relative;
+                  width: 100%;
+                  transform: scale(1.25);
+                  height: auto;
+                  -webkit-backface-visibility: hidden;
+                  backface-visibility: hidden;
+                }
+              }
+            }
+          }
+          &:hover .hollow {
+            box-shadow:
+              0 0 0 0px rgba(255,255,255,0.3),
+              inset 0 0 3px rgba(115,114, 23, 0.8);
+          }
+          &:hover .hollow .info {
+            transform-style: preserve-3d;
+            transform: rotate3d(0,1,0,-180deg);
+          }
+        }
+      }
+    }
+  }
+}

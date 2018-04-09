@@ -1,0 +1,443 @@
+/*var********************************************************************************************************************/
+/*viewport***************************************************************************************************************/
+@media only screen and (min-width: 1440px) {
+  article {
+    overflow: hidden;
+    transform-origin: bottom;
+    transform: rotateX(90deg);
+    max-height: 0px;
+    animation: displaynone 700ms ease-in-out forwards 1400ms; }
+    article:not(.about) section:not(.animatedBackground) {
+      opacity: 0;
+      animation: fadein 700ms ease-in-out forwards 2100ms; }
+  footer {
+    overflow: hidden;
+    transform-origin: top;
+    max-height: 0px;
+    transform: rotateX(90deg);
+    opacity: 0;
+    animation: displaynone 700ms ease-in forwards 1400ms; }
+    footer * {
+      opacity: 0;
+      animation: fadein 700ms ease-in-out forwards 2100ms; } }
+
+/*font*******************************************************************************************************************/
+h1 {
+  font-family: Origam;
+  font-size: 3em;
+  letter-spacing: 0.2em;
+  line-height: 1.5em;
+  padding-left: 0.2em;
+  color: #000000; }
+
+h2 {
+  font-family: "Noto Sans";
+  font-weight: 500;
+  font-size: 4em;
+  letter-spacing: 0.6em;
+  padding-left: 0.6em;
+  color: white;
+  background: url(https://erebos.xyz/PIC/kreide.png);
+  background-size: 21px;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; }
+
+h3 {
+  font-family: "Noto Sans";
+  font-weight: 500;
+  font-size: 1.8em;
+  letter-spacing: 0.6em;
+  padding-left: 0.6em;
+  color: white;
+  background: url(https://erebos.xyz/PIC/kreide.png);
+  background-size: 21px;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; }
+
+h4 {
+  font-size: 1.2em;
+  font-family: "Noto Sans";
+  color: black; }
+
+h5 {
+  display: block;
+  font-size: 1em;
+  margin-bottom: .33em;
+  margin-left: 0;
+  margin-right: 0;
+  font-weight: bold; }
+
+a {
+  text-decoration: none;
+  color: #000000; }
+
+blink {
+  animation-duration: 1s;
+  animation-name: blink;
+  animation-iteration-count: infinite;
+  animation-timing-function: steps(2, start); }
+
+/************************************************************************************************************************/
+* {
+  margin: 0px;
+  padding: 0px; }
+
+html {
+  padding: 0px;
+  margin: 0px; }
+
+body {
+  font-family: "Noto Sans";
+  font-weight: lighter;
+  letter-spacing: 2px;
+  background-attachment: fixed;
+  background-image: url(https://erebos.xyz/PIC/m33.png);
+  font-weight: 500;
+  font-size: calc(17.5px - 0.09vw); }
+
+section {
+  overflow: hidden;
+  top: 0px;
+  min-height: 666px; }
+
+footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+  background-color: #000000; }
+
+@keyframes fadein {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+@keyframes fadeout {
+  0% {
+    opacity: 1;
+    transform: scale(1); }
+  100% {
+    opacity: 0;
+    transform: scale(0); } }
+
+@keyframes displaynone {
+  0% {
+    transform: rotateX(90deg); }
+  100% {
+    opacity: 1;
+    max-height: 100%;
+    transform: rotateX(0deg); } }
+
+@keyframes rolldown {
+  0% {
+    opacity: 0;
+    transform: rotateX(180deg); }
+  100% {
+    opacity: 1;
+    transform: rotateX(0deg); } }
+
+@keyframes rollleft {
+  0% {
+    opacity: 0;
+    transform: rotateY(-180deg); }
+  100% {
+    opacity: 1;
+    transform: rotateY(0deg); } }
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg); }
+  100% {
+    transform: rotate(360deg); } }
+
+@keyframes showr {
+  0% {
+    right: -50%; }
+  100% {
+    right: 0%;
+    position: relative; } }
+
+@keyframes showl {
+  0% {
+    left: -50%; }
+  100% {
+    left: 0%;
+    position: relative; } }
+
+@keyframes showrock {
+  100% {
+    position: relative; } }
+
+@keyframes nyan-background {
+  from {
+    background-position: 100% 0; }
+  to {
+    background-position: 0% 0; } }
+
+@keyframes blink {
+  80% {
+    visibility: hidden; } }
+
+.pace .pace-progress {
+  z-index: 99;
+  position: fixed;
+  top: 0px;
+  z-index: 39;
+  right: 100%;
+  width: 100%;
+  height: 1px;
+  background-image: url(https://erebos.xyz/PIC/progressbar.gif); }
+
+.portfolio {
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+  font-size: 0.7em;
+  font-size: 0.8em; }
+  .portfolio h3 {
+    font-size: 1.6em; }
+  .portfolio a {
+    color: #fff;
+    text-decoration: underline; }
+
+.portfolio-as {
+  flex-direction: column;
+  background-color: #2a2a2a;
+  border-right: solid #ad7031;
+  color: #fff; }
+  .portfolio-as .info {
+    background-color: rgba(0, 0, 0, 0.5);
+    margin: 5% 0; }
+
+.portfolio-s {
+  overflow: auto;
+  width: 100%;
+  background-color: #23373b; }
+
+.portfolio-a {
+  margin: 1% 10%;
+  background-color: #fff; }
+  .portfolio-a:before {
+    content: "";
+    float: left;
+    padding-bottom: 75%; }
+  .portfolio-a:after {
+    content: "";
+    display: table;
+    clear: both; }
+
+.portfolio-as .member {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 13%;
+  background-color: rgba(0, 0, 0, 0.5); }
+  .portfolio-as .member .profile {
+    min-width: 130px;
+    max-width: 220px;
+    position: relative; }
+    .portfolio-as .member .profile .pic {
+      overflow: hidden;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      border-radius: 50%; }
+      .portfolio-as .member .profile .pic img {
+        width: 100%;
+        height: auto; }
+    .portfolio-as .member .profile .hollow {
+      overflow: hidden;
+      position: relative;
+      border-radius: 50%;
+      margin: 8%;
+      padding: 10% 20%;
+      transition: all 0.4s ease-in-out;
+      background-attachment: fixed;
+      background-color: #a80000;
+      box-shadow: 0 0 0 17px rgba(255, 252, 252, 0.53), inset 0 0 3px rgba(115, 114, 23, 0.8); }
+      .portfolio-as .member .profile .hollow .info {
+        transition: all 0.4s ease-in-out;
+        transform-style: preserve-3d;
+        margin: -25%;
+        border-radius: 50%; }
+        .portfolio-as .member .profile .hollow .info .iback {
+          display: flex;
+          flex-direction: column;
+          position: absolute;
+          top: 0px;
+          right: 0px;
+          align-items: center;
+          justify-content: center;
+          width: 100%;
+          height: 100%;
+          border-radius: 50%;
+          color: #fff;
+          background: #000;
+          transform: rotate3d(0, 1, 0, 180deg);
+          -webkit-backface-visibility: hidden;
+          backface-visibility: hidden; }
+        .portfolio-as .member .profile .hollow .info .ifront {
+          overflow: hidden;
+          border-radius: 50%; }
+          .portfolio-as .member .profile .hollow .info .ifront img {
+            position: relative;
+            width: 100%;
+            transform: scale(1.2);
+            height: auto;
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden; }
+    .portfolio-as .member .profile:hover .hollow {
+      box-shadow: 0 0 0 0px rgba(0, 0, 0, 0.3), inset 0 0 3px rgba(115, 114, 23, 0.8); }
+    .portfolio-as .member .profile:hover .hollow .info {
+      transform-style: preserve-3d;
+      transform: rotate3d(0, 1, 0, -180deg); }
+
+.template-tutorial {
+  overflow: hidden;
+  max-height: 100vh; }
+
+.site-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #2a2a2a;
+  border-bottom: solid #ad7031;
+  color: #fff;
+  font-size: 0.8em;
+  padding: 10px 0;
+  height: 8vh; }
+
+h2 {
+  display: inline;
+  font-size: 2.5em; }
+
+.portfolio {
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  height: 90vh;
+  font-size: 0.7em; }
+  .portfolio h1 {
+    display: inline; }
+  .portfolio h3 {
+    font-size: 1.6em; }
+  .portfolio a {
+    color: #ad7031;
+    text-decoration: underline; }
+
+.portfolio-as {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #2a2a2a;
+  border-right: solid #ad7031;
+  width: 20%;
+  color: #fff; }
+
+.portfolio-s {
+  overflow: auto;
+  background-color: #23373b; }
+
+.portfolio-a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1% 10%;
+  background-color: #fff; }
+  .portfolio-a:before {
+    content: "";
+    float: left;
+    padding-bottom: 75%; }
+  .portfolio-a:after {
+    content: "";
+    display: table;
+    clear: both; }
+
+.portfolio-f {
+  padding: 5px; }
+
+.tutorial-s {
+  background-color: #2a2a2a; }
+  .tutorial-s .members {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    min-height: calc(100vh - 320px);
+    width: 100%; }
+    .tutorial-s .members .mrow {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      align-items: center;
+      width: 100%; }
+      .tutorial-s .members .mrow .member {
+        display: flex;
+        flex-direction: column;
+        flex: 0.15; }
+        .tutorial-s .members .mrow .member .profile {
+          position: relative;
+          min-width: 150px;
+          max-width: 180px; }
+          .tutorial-s .members .mrow .member .profile .pic {
+            position: absolute;
+            width: 100%;
+            height: 100%; }
+            .tutorial-s .members .mrow .member .profile .pic img {
+              border-radius: 50%;
+              width: 100%;
+              height: auto; }
+          .tutorial-s .members .mrow .member .profile .hollow {
+            position: relative;
+            border-radius: 50%;
+            margin: 11%;
+            padding: 1%;
+            transition: all 0.4s ease-in-out;
+            background-attachment: fixed;
+            background-image: url(https://erebos.xyz/PIC/m33.png); }
+            .tutorial-s .members .mrow .member .profile .hollow .info {
+              transition: all 0.4s ease-in-out;
+              transform-style: preserve-3d;
+              margin: -2.5%; }
+              .tutorial-s .members .mrow .member .profile .hollow .info .iback {
+                display: flex;
+                flex-direction: column;
+                position: absolute;
+                top: 0px;
+                right: 0px;
+                align-items: center;
+                justify-content: center;
+                width: 100%;
+                height: 100%;
+                border-radius: 50%;
+                color: #fff;
+                background: #000;
+                transform: rotate3d(0, 1, 0, 180deg);
+                -webkit-backface-visibility: hidden;
+                backface-visibility: hidden; }
+              .tutorial-s .members .mrow .member .profile .hollow .info .ifront {
+                overflow: hidden;
+                border-radius: 50%; }
+                .tutorial-s .members .mrow .member .profile .hollow .info .ifront img {
+                  position: relative;
+                  width: 100%;
+                  transform: scale(1.25);
+                  height: auto;
+                  -webkit-backface-visibility: hidden;
+                  backface-visibility: hidden; }
+          .tutorial-s .members .mrow .member .profile:hover .hollow {
+            box-shadow: 0 0 0 0px rgba(255, 255, 255, 0.3), inset 0 0 3px rgba(115, 114, 23, 0.8); }
+          .tutorial-s .members .mrow .member .profile:hover .hollow .info {
+            transform-style: preserve-3d;
+            transform: rotate3d(0, 1, 0, -180deg); }
+
+.party {
+  background-color: transparent;
+  background-image: none; }
+
+/*# sourceMappingURL=home.css.map */

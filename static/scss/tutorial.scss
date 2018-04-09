@@ -1,0 +1,180 @@
+.template-tutorial{
+  overflow: hidden;
+  max-height: 100vh;
+}
+
+.site-header{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #2a2a2a;
+  border-bottom: solid #ad7031;
+  color: #fff;
+  font-size: 0.8em;
+  padding: 10px 0;
+  height: 8vh;
+}
+
+h2{
+  display: inline;
+  font-size: 2.5em;
+}
+
+.portfolio{
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  height: 90vh;
+  font-size: 0.7em;
+  h1{
+    display: inline;
+  }
+  h3{
+    font-size: 1.6em;
+  }
+  a{
+    color: #ad7031;
+    text-decoration: underline;
+  }
+}
+
+.portfolio-as {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #2a2a2a;
+  border-right: solid #ad7031;
+  width: 20%;
+  color: #fff;
+}
+
+.portfolio-s {
+  overflow: auto;
+  // width: 100%;
+  background-color: #23373b;
+}
+
+.portfolio-a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1% 10%; 
+  &:before {
+    content: "";
+    float: left;
+    //this div will be only half as tall as it is wide
+    padding-bottom: 75%;
+  }
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  background-color: #fff;
+}
+
+.portfolio-f {
+  padding: 5px;
+}
+
+.tutorial-s{
+  background-color: #2a2a2a;
+  .members{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    min-height: calc(100vh - 320px);
+    width: 100%;
+    .mrow{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      align-items: center;
+      width: 100%;
+      .member{
+        display: flex;
+        flex-direction: column;
+        flex: 0.15;
+        .profile{
+          position: relative;
+          min-width: 150px;
+          max-width: 180px;
+          .pic{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            img{
+              border-radius: 50%;
+              width: 100%;
+              height: auto;
+            }
+          }
+          .hollow{
+            position: relative;
+            border-radius: 50%;
+            margin: 11%;
+            padding: 1%;
+            transition: all 0.4s ease-in-out;
+            background-attachment: fixed;
+            background-image: url(https://erebos.xyz/PIC/m33.png);
+            // background-color: #a80000;
+            .info{
+              transition: all 0.4s ease-in-out;
+              transform-style: preserve-3d;
+              margin: -2.5%;
+              .iback{
+                display: flex;
+                flex-direction: column;
+                position: absolute;
+                top: 0px;
+                right: 0px;
+                align-items: center;
+                justify-content: center;
+                width: 100%;
+                height: 100%;
+                border-radius: 50%;
+                color: #fff;
+                background: #000;
+                transform: rotate3d(0,1,0,180deg);
+                -webkit-backface-visibility: hidden;
+                backface-visibility: hidden;
+                h3{
+
+
+                }
+                p{
+
+                }
+              }
+              .ifront{
+                overflow: hidden;
+                border-radius: 50%;
+                img{
+                  position: relative;
+                  width: 100%;
+                  transform: scale(1.25);
+                  height: auto;
+                  -webkit-backface-visibility: hidden;
+                  backface-visibility: hidden;
+                }
+              }
+            }
+          }
+          &:hover .hollow {
+            box-shadow:
+              0 0 0 0px rgba(255,255,255,0.3),
+              inset 0 0 3px rgba(115,114, 23, 0.8);
+          }
+          &:hover .hollow .info {
+            transform-style: preserve-3d;
+            transform: rotate3d(0,1,0,-180deg);
+          }
+        }
+      }
+    }
+  }
+}
